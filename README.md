@@ -1,33 +1,45 @@
- 
+# Day 2 Super Powers
 
+## Super Powers
 
-> Open this page at [https://codeninjassummercamps.github.io/day-2-super-powers/](https://codeninjassummercamps.github.io/day-2-super-powers/)
+In this activity, you will learn about coordinates and variables by helping Sensei make code that gives us super powers!
 
-## Use as Extension
+## Listen to Sensei
 
-This repository can be added as an **extension** in MakeCode.
+Make sure you are listening to Sensei and following along with the code!
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/codeninjassummercamps/day-2-super-powers** and import
+## All Done!
 
-## Edit this project ![Build status badge](https://github.com/codeninjassummercamps/day-2-super-powers/workflows/MakeCode/badge.svg)
+Good work following along with Sensei!
 
-To edit this repository in MakeCode.
+```blocks
+let speed = 1
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/codeninjassummercamps/day-2-super-powers** and click import
+player.onChat("jump", function () {
+    player.teleport(pos(0, speed, 0))
+})
 
-## Blocks preview
+player.onChat("zoom", function () {
+    player.teleport(pos(0, 0, speed))
+})
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
+player.onChat("xoom", function () {
+    player.teleport(pos(speed, 0, 0))
+})
 
-![A rendered view of the blocks](https://github.com/codeninjassummercamps/day-2-super-powers/raw/master/.github/makecode/blocks.png)
+player.onChat("setSpeed", function (num1) {
+    speed = num1;
+})
 
-#### Metadata (used for search, rendering)
+player.onChat("randomSpeed", function () {
+    speed = randint(2, 15);
+})
 
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+player.onChat("return", function () {
+    player.teleport(world(0, 0, 0))
+})
+```
+
+## Activity Complete!
+
+You did it! You learned about Variables and Coordinates in Minecraft!
